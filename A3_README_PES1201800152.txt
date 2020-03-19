@@ -1,0 +1,68 @@
+In this assignment we have used state space search to find the solutions to the problem
+Water Jug 
+The Data structures used by me were are the following 
+
+1.)Doubly Linked List 
+2.)Array of function in the order mentioned in the problem statement 
+
+I basically tried to implement various functions to carry out the state space search 
+The are of two types 
+
+>>>List related functions and its structure :
+
+struct node
+{
+    state curr;
+    struct node * prev;
+    struct node * next;
+};
+typedef struct node Node;
+
+struct List
+{
+    Node * head;
+    Node * tail;
+};
+typedef struct List List;
+
+void initList(List * mylist);
+void add_at_end(List * mylist,const state * curr);
+void delete_at_end(List * mylist);
+int is_repeated(List * mylist, const state * curr); // checks if the node is repeated.
+void disp_list(const List * mylist);
+
+>>>State related functions and its structure:
+
+
+struct state
+{
+    int a;
+    int b;
+    int c;
+    int next_func_index;
+};
+typedef struct state state;
+
+void setState(state * curr, int a,int b, int c); // initializes the state
+
+int moveAB(const state * src , state * dst);// moves and checks whether valid and return the same
+int moveAC(const state * src , state * dst);// moves and checks whether valid and return the same
+int moveBA(const state * src , state * dst);// moves and checks whether valid and return the same
+int moveBC(const state * src , state * dst);// moves and checks whether valid and return the same
+int moveCA(const state * src , state * dst);// moves and checks whether valid and return the same
+int moveCB(const state * src , state * dst);// moves and checks whether valid and return the same
+
+void disp_state(const state * curr);
+int is_valid(const state * curr);
+int are_same(const state *lhs, const state *rhs); //checks if two states are same or not .
+
+>>>>
+The key takeaway from this assignment was that 
+I understood how AI actually works and also about pointers to the functions 
+It was a very good assignment overall.
+
+
+Command to compile (But make sure all files are in the same directory)
+
+$ gcc A3_client_PES1201800152.c A3_impl_PES1201800152.c
+$ ./a.out 

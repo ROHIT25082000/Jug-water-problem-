@@ -12,6 +12,7 @@ int main()
     state goalstate;// end state 
     scanf("%d%d%d",&a,&b,&c);
     setState(&goalstate,a,b,c);
+    printf("\n");
 
     List solution;	// solution list :contains the final solution 
     initList(&solution);	

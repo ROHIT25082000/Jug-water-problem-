@@ -1,4 +1,4 @@
-In this assignment we have used state space search to find the solutions to the problem
+In this project we have used state space search to find the solutions to the problem
 Water Jug 
 The Data structures used by me were are the following 
 
